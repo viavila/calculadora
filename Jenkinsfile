@@ -33,7 +33,7 @@ pipeline{
      }        
  	stage('docker crear contenedor'){
             steps{
-                sh 'docker run -d -p9090:8090 --name calculadora localhos:5000/calculadora'
+                sh 'docker run -d -p9090:8090 --name calculadora localhost:5000/calculadora'
             }  
      }        
         
