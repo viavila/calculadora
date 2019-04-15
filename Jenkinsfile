@@ -18,7 +18,7 @@ pipeline{
      }        
  	stage('docker build'){
             steps{
-                sh 'docker build -t localhost:5000/calculadora'
+                sh 'docker build -t localhost:5000/calculadora .'
             }  
      }         
  	stage('docker push '){
