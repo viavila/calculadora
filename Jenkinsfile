@@ -39,9 +39,9 @@ pipeline{
 
             steps {
 
-                sh "sudo docker stop calculadora"
+                sh " docker stop calculadora"
 
-                sh "sudo docker rm calculadora"
+                sh " docker rm calculadora"
 
              }
 
