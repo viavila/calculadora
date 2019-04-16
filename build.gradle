@@ -13,6 +13,9 @@ repositories {
 	jcenter()
 	mavenCentral()
 }
+bootJar{
+	launchScript()
+}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
