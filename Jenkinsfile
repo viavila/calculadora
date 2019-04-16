@@ -31,7 +31,7 @@ pipeline{
 
             when {
 
-                expression { sh script: '''if [ -z $(docker ps -f name=calculadora -q) ]; then true; else false; fi''', returnStatus: true
+                expression { sh script: '''if [ -z $(docker ps -a -f name=calculadora -q) ]; then true; else false; fi''', returnStatus: true
 
                   }
 
@@ -46,10 +46,6 @@ pipeline{
              }
 
         }
-
-
-
-  
    
  	stage('docker crear contenedor'){
             steps{
