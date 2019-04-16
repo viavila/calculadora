@@ -51,7 +51,12 @@ pipeline{
             steps{
                 sh 'docker run -d -p9090:8090 --name calculadora localhost:5000/calculadora'
             }  
-     }        
+     }  
+	stage('playbook'){
+            steps{
+                sh 'ansible-playbook playbook.yml'
+            }  
+     }       
         
     }
 }
