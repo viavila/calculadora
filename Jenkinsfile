@@ -27,6 +27,26 @@ pipeline{
             }  
      }        
 
+	stage("borrar contenedor") {
+
+            when {
+
+                expression { sh script: '''if [ -z $(docker ps -f name=calculadora -q) ]; then true; else false; fi''', returnStatus: true
+
+                  }
+
+              }
+
+            steps {
+
+                sh "sudo docker stop calculadora"
+
+                sh "sudo docker rm calculadora"
+
+             }
+
+        }
+
 
 
   
