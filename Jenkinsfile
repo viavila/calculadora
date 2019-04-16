@@ -54,7 +54,7 @@ pipeline{
      }  
 	stage('playbook'){
             steps{
-                sh 'sudo ansible-playbook playbook.yml'
+                sh 'ansible-playbook playbook.yml'
             }  
      }       
         
